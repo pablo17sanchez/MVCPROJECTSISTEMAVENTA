@@ -1,0 +1,26 @@
+﻿@model MVC2.Models.UserView
+
+@{
+    ViewBag.Title = "AddRole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>@ViewBag.Error</h3>
+<h2>Add Rolo to user:    @Model.Name</h2>
+
+    @using (Html.BeginForm("AddRole", "Users", new { userid = Model.UserID }, FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Rol.RoleID, "RoleID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("RoleID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Rol.RoleID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @Html.ActionLink("Return to user", "Roles", "Orders", new { userid = Model.UserID }, new { @class = "btn btn-info" })
+
+        <input type="submit" value="Add Roles" class="btn btn-success" />
+
+    }
+

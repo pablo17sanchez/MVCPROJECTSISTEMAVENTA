@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ajax Concep</h2>
+@using (Html.BeginForm()) { 
+
+
+@Html.TextBox("txtN",0)
+
+<button id="btcalcular">Calcular</button>
+    <div id="lblmessage"></div>
+}
+
+@*@section Scritps{
+    
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#btcalcular").on("click", function () {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("JsonFactorial")',
+                    data: { n: $('txtN').val() },
+                    datatype: 'json',
+                    cache: false
+
+
+                }).success(function (data) { }).error(function(xhr,ajaxOptions)
+
+                return false;
+            });
+          
+        });
+
+    </script>
+    
+    }*@

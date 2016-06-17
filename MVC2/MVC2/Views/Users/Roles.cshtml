@@ -1,0 +1,40 @@
+﻿@model MVC2.Models.UserView
+
+@{
+    ViewBag.Title = "Roles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Roles for user: @Model.Name</h2>
+
+
+<p>
+    @Html.ActionLink("Add Role", "AddRole", new { userid = Model.UserID }, new
+{
+    @class =
+
+        "btn btn-primary"
+})
+    @Html.ActionLink("Back to list", "Index", new { }, new { @class = "btn btn-info" })
+</p>
+<table class="table">
+    @for (int i = 0; i < Model.Roles.Count; i++)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Roles[i].Name)
+            </td>
+
+            <td>
+
+                @Html.ActionLink("Delete", "Delete", new
+           {
+               userid = Model.UserID,
+               rolid = Model.Roles[i].RoleID.ToString()
+           })
+            </td>
+        </tr>
+    
+    }
+</table>

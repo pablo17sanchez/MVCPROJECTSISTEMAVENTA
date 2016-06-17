@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/SyntaxHighlighter/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/SyntaxHighlighter/shCoreDefault.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Content/Gridmvc.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/gridmvc.datepicker.css" rel="stylesheet" />
+    <!-- SCRIPTS -->
+    <script src="~/Scripts/jquery-2.0.3.min.js" type="text/javascript"> </script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/main.js" type="text/javascript"> </script>
+
+    @*<script src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/shBrushCSharp.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/shBrushCss.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/shBrushRazor.js"></script>
+
+    <script src="~/Scripts/gridmvc.js" type="text/javascript"> </script>
+    <script src="~/Scripts/gridmvc.lang.ru.js" type="text/javascript"> </script>
+    <script src="~/Scripts/gridmvc.lang.fr.js" type="text/javascript"> </script>*@
+
+    <script src="~/Scripts/gridmvc.customwidgets.js" type="text/javascript"> </script>
+    <!-- referencing datepicker control -->
+    @*<script src="~/Scripts/bootstrap-datepicker.js"></script>
+     Locale datepicker scripts ( get more on https://github.com/bukharin/bootstrap-datepicker/tree/master/js/locales )
+    <script src="~/Scripts/bootstrap-datepicker.ru.js"></script>*@  
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Vacano", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="font-weight:bold">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archivos<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+
+                            <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                            <li>@Html.ActionLink("Document Types", "Index", "DocumentTypes")</li>
+                            <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
+                            <li>@Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
+                            <div class="dropdown-divider"></div>
+                            <li>@Html.ActionLink("Users", "Index", "Users")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operaciones<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Orders", "NewOrder", "Orders")</li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

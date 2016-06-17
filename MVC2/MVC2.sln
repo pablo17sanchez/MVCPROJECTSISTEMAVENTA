@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC2", "MVC2\MVC2.csproj", "{027490CD-1F20-4E3D-985C-E501B2EFD5E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC2.Tests", "MVC2.Tests\MVC2.Tests.csproj", "{35D07415-A150-4537-809D-711F26E553B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{027490CD-1F20-4E3D-985C-E501B2EFD5E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027490CD-1F20-4E3D-985C-E501B2EFD5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027490CD-1F20-4E3D-985C-E501B2EFD5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027490CD-1F20-4E3D-985C-E501B2EFD5E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D07415-A150-4537-809D-711F26E553B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D07415-A150-4537-809D-711F26E553B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D07415-A150-4537-809D-711F26E553B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D07415-A150-4537-809D-711F26E553B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
